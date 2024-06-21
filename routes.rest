@@ -1,0 +1,32 @@
+// local host: 3000
+
+### get all
+GET http://localhost:3000/users
+
+### get individual
+GET http://localhost:3000/users/59b99db4cfa9a34dcd7885b6
+
+### create user
+POST http://localhost:3000/users HTTP/1.1
+content-type: application/json
+
+{
+    "email": "bill@test.com",
+    "username": "Cooper",
+    "name": "Cooper",
+    "ipaddress": "00.000.000.00"
+}
+
+### PUT update user
+PUT http://localhost:3000/user/6675beb2b5a8c95486e80a16 HTTP/1.1
+content-type: application/json
+
+{
+    "email": "betty@test.com",
+    "username": "Betty",
+    "name": "Lane",
+    "ipaddress": "00.000.000.00",
+}
+
+### DELETE user
+DELETE http://localhost:3000/users/6675beb2b5a8c95486e80a16
